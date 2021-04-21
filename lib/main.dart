@@ -12,6 +12,7 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
+      showPerformanceOverlay: true,
       title: 'Welcome to Flutter',
       home: new Scaffold(
         appBar: new AppBar(
