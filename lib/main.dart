@@ -1,13 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
 import 'dart:developer' as developer;
+import 'package:flutter/rendering.dart';
 
-void main() => runApp(MyApp());
+void main() {
+  debugPaintSizeEnabled = true;
+  runApp(MyApp());
+}
 
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-
     return new MaterialApp(
       title: 'Welcome to Flutter',
       home: new Scaffold(
@@ -34,7 +37,7 @@ class RandomWordsState extends State<RandomWords> {
   @override
   Widget build(BuildContext context) {
     var wordPair = new WordPair.random();
-    developer.log('wordPair:${wordPair}',name : "RandomWordsState");
+    developer.log('wordPair:${wordPair}', name: "RandomWordsState");
     return new Text(wordPair.asPascalCase);
   }
 }
