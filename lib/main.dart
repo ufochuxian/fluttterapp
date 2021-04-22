@@ -12,21 +12,26 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-      showPerformanceOverlay: true,
-      title: 'Welcome to Flutter',
-      home: new Scaffold(
-        appBar: new AppBar(
-          title: new Text('Welcome to Flutter'),
-        ),
-        body: Center(
-          //child: new Text(wordPair.asPascalCase),
-          child:  _MyCanvas(),
-        ),
-      ),
-    );
+        showPerformanceOverlay: true,
+        title: 'Welcome to Flutter',
+        home: new Scaffold(
+          appBar: new AppBar(
+            title: new Text('Welcome to Flutter'),
+          ),
+          body: Center(
+            //child: new Text(wordPair.asPascalCase),
+            child: new Opacity(
+              opacity: 0.8,
+              child: new Container(
+                height: 150,
+                width: 200,
+                color: Colors.red,
+              ),
+            ),
+          ),
+        ));
   }
 }
-
 
 class MyCavansPainter extends CustomPainter {
   @override
@@ -34,12 +39,11 @@ class MyCavansPainter extends CustomPainter {
     // TODO: implement paint
     Paint paint = new Paint();
     paint.color = Colors.amber;
-    canvas.drawCircle(Offset(100.0,200.0), 40, paint);
+    canvas.drawCircle(Offset(100.0, 200.0), 40, paint);
     Paint paintRect = Paint();
     paintRect.color = Colors.lightBlue;
-    Rect react = Rect.fromPoints(Offset(100,100), Offset(200,200));
+    Rect react = Rect.fromPoints(Offset(300, 300), Offset(200, 500));
     canvas.drawRect(react, paintRect);
-
   }
 
   @override
@@ -47,7 +51,6 @@ class MyCavansPainter extends CustomPainter {
 
   @override
   bool shouldRebuildSemantics(covariant CustomPainter oldDelegate) => false;
-
 }
 
 class _MyCanvas extends StatelessWidget {
@@ -60,8 +63,27 @@ class _MyCanvas extends StatelessWidget {
       ),
     );
   }
+}
 
+class CustomButton extends StatelessWidget {
+  final String label;
 
+  CustomButton(this.label);
 
+  @override
+  Widget build(BuildContext context) {
+    return new RaisedButton(
+        onPressed: () {
+          developer.log("被点击了");
+        },
+        child: new Text(label));
+  }
+}
 
+//使用自定义组件,在flutter中推荐使用已有widget"组合"的方式来进行自定义view
+@override
+Widget build(BuildContext context) {
+  return new Center(
+    child: new CustomButton("hello"),
+  );
 }
