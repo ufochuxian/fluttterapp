@@ -4,7 +4,7 @@ import 'dart:developer' as developer;
 import 'package:flutter/rendering.dart';
 
 void main() {
-  debugPaintSizeEnabled = true;
+  // debugPaintSizeEnabled = false;
   runApp(MyApp());
 }
 
@@ -12,8 +12,8 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return new MaterialApp(
-        showPerformanceOverlay: true,
-        title: 'Welcome to Flutter',
+        // showPerformanceOverlay: false,
+        title: 'Welcome t o Flutter',
         home: new Scaffold(
           appBar: new AppBar(
             title: new Text('Welcome to Flutter'),
@@ -91,20 +91,20 @@ Widget build(BuildContext context) {
 
 TextStyle style = new TextStyle(color: Colors.red,fontSize: 30);
 
+//1、 定义一个数据源
+final items = new List<String>.generate(1000, (index) => "Item $index");
+
 class MyListView extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-
-    return new ListView(
-      children: <Widget>[
-        Text("aaaaaaaaa",style: style),
-        Text("bbbbbbbbb",style: style),
-        Text("ccccccccc",style: style),
-        Text("ddddddddd"),
-        Text("eeeeeeeeee"),
-        Text("ffffffffff"),
-      ],
+    // ListView Builder用于将数据转换成Widget控件
+    return new ListView.builder(
+      itemCount: items.length,
+      itemBuilder: (context, index) {
+        return new ListTile(
+          title: new Text('${items[index]}'),
+        );
+      },
     );
   }
-
 }
