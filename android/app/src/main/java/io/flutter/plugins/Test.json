@@ -1,0 +1,1679 @@
+{
+	"id": "209",
+	"package": "209",
+	"sections": [{
+		"id": "0",
+		"pageData": {
+			"id": "0",
+			"mode": "auto",
+			"cover": {
+				"img": "p0-0",
+				"audio": "voice0",
+				"txt": ""
+			},
+			"pages": [{
+				"id": "2",
+				"img": "p7-1",
+				"width": 2436,
+				"height": 1125,
+				"type": "storybook",
+				"txts": [{
+					"txt": "巴尔塔扎尔王国有一家书店，在那里，你可以找到整个王国最好的书。一天，国王巴尔塔扎尔悄悄地去了那家书店……",
+					"start": 0,
+					"end": 0,
+					"audio": "voice1"
+				}]
+			}, {
+				"id": "3",
+				"img": "p8-2",
+				"width": 2436,
+				"height": 1125,
+				"type": "storybook",
+				"txts": [{
+					"txt": "“唉！我应该选哪本书呢？ 是选这本关于马的，还是那本关于仙女的呢？或者这本关于蝴蝶的？”国王犹豫不决。突然，他叫道：“啊，找到我想要的书了！”",
+					"start": 0,
+					"end": 0,
+					"audio": "voice2"
+				}]
+			}, {
+				"id": "4",
+				"img": "p9p10-3",
+				"width": 2436,
+				"height": 1125,
+				"type": "storybook",
+				"txts": [{
+					"txt": "第二天早上，米莉公主醒了。她跳下床，冲出房间，去见她的爸爸——巴尔塔扎尔国王。“爸爸！今天是我的生日哟！”“生日快乐，我亲爱的小公主！”国王对她说，“我要给你办一个小小的生日派对，就在今天下午。”米莉给了爸爸一个大大的吻，因为爸爸总是这么贴心，考虑得这么周到。突然，国王喊道：“糟了！请帖！米莉，我忘了给你的朋友们发请帖了！”",
+					"start": 0,
+					"end": 0,
+					"audio": "voice3"
+				}]
+			}, {
+				"id": "5",
+				"img": "p11p12-4",
+				"width": 2436,
+				"height": 1125,
+				"type": "storybook",
+				"txts": [{
+					"txt": "“哎呀！”米莉说，“没关系。我来写请帖，写完给朋友们送去。”小公主在桌子前坐了下来，拿出一叠信纸，又拿起自己最好的笔，写道：诚挚地邀请您于今天下午来国王的城堡，参加我的生日派对。米莉公主\n写完之后，米莉把每张请帖都装进了信封。她仔细地封上每一个信封，然后小心地盖上了她的皇家印章。",
+					"start": 0,
+					"end": 0,
+					"audio": "voice4"
+				}]
+			}]
+		},
+		"type": "storybook"
+	}, {
+		"autoAsyncs": [
+			[{
+				"async": "false",
+				"commands": [{
+					"args": {},
+					"instruct": "playAudio"
+				}],
+				"id": "bgm",
+				"type": "audio"
+			}],
+			[{
+				"commands": [{
+					"args": {
+						"questionTxt": "米莉公主写完了要发的邀请函，时间已经不多啦！我们一起帮米莉公主把每张邀请函装到相应的信封里吧！",
+						"showIP": "true"
+					},
+					"instruct": "playAudio"
+				}],
+				"id": "13_ap2p_tap_2_quest",
+				"type": "audio"
+			}],
+			[{
+				"commands": [{
+					"args": {
+						"dragRightIDs": ["sprite_02"],
+						"handle": "handleRight1",
+						"handleDragWrong": "handleWrong1"
+					},
+					"instruct": "openDrag"
+				}],
+				"id": "sprite_06",
+				"type": "sprite"
+			}, {
+				"commands": [{
+					"args": {
+						"dragRightIDs": ["sprite_03"],
+						"handle": "handleRight2",
+						"handleDragWrong": "handleWrong2"
+					},
+					"instruct": "openDrag"
+				}],
+				"id": "sprite_07",
+				"type": "sprite"
+			}, {
+				"commands": [{
+					"args": {
+						"dragRightIDs": ["sprite_04"],
+						"handle": "handleRight3",
+						"handleDragWrong": "handleWrong3"
+					},
+					"instruct": "openDrag"
+				}],
+				"id": "sprite_08",
+				"type": "sprite"
+			}, {
+				"commands": [{
+					"args": {
+						"dragRightIDs": ["sprite_05"],
+						"handle": "handleRight4",
+						"handleDragWrong": "handleWrong4"
+					},
+					"instruct": "openDrag"
+				}],
+				"id": "sprite_09",
+				"type": "sprite"
+			}]
+		],
+		"feedBack": [{
+			"id": "handleRight1",
+			"results": [{
+				"args": {
+					"itemIDs": ["right"]
+				},
+				"instruct": "playAudio"
+			}, {
+				"args": {
+					"itemIDs": ["sprite_06"]
+				},
+				"instruct": "closeDrag"
+			}, {
+				"args": {
+					"itemIDs": ["sprite_06"]
+				},
+				"instruct": "hide"
+			}, {
+				"args": {
+					"gameFinish": "true",
+					"itemIDs": ["13_success"]
+				},
+				"instruct": "playAudio"
+			}],
+			"type": "right"
+		}, {
+			"id": "handleRight2",
+			"results": [{
+				"args": {
+					"itemIDs": ["right"]
+				},
+				"instruct": "playAudio"
+			}, {
+				"args": {
+					"itemIDs": ["sprite_07"]
+				},
+				"instruct": "closeDrag"
+			}, {
+				"args": {
+					"itemIDs": ["sprite_07"]
+				},
+				"instruct": "hide"
+			}, {
+				"args": {
+					"gameFinish": "true",
+					"itemIDs": ["13_success"]
+				},
+				"instruct": "playAudio"
+			}],
+			"type": "right"
+		}, {
+			"id": "handleRight3",
+			"results": [{
+				"args": {
+					"itemIDs": ["right"]
+				},
+				"instruct": "playAudio"
+			}, {
+				"args": {
+					"itemIDs": ["sprite_08"]
+				},
+				"instruct": "closeDrag"
+			}, {
+				"args": {
+					"itemIDs": ["sprite_08"]
+				},
+				"instruct": "hide"
+			}, {
+				"args": {
+					"gameFinish": "true",
+					"itemIDs": ["13_success"]
+				},
+				"instruct": "playAudio"
+			}],
+			"type": "right"
+		}, {
+			"id": "handleRight4",
+			"results": [{
+				"args": {
+					"itemIDs": ["right"]
+				},
+				"instruct": "playAudio"
+			}, {
+				"args": {
+					"itemIDs": ["sprite_09"]
+				},
+				"instruct": "closeDrag"
+			}, {
+				"args": {
+					"itemIDs": ["sprite_09"]
+				},
+				"instruct": "hide"
+			}, {
+				"args": {
+					"gameFinish": "true",
+					"itemIDs": ["13_success"]
+				},
+				"instruct": "playAudio"
+			}],
+			"type": "right"
+		}, {
+			"id": "handleWrong1",
+			"results": [{
+				"args": {
+					"itemIDs": ["wrong_wobble"]
+				},
+				"instruct": "playAudio"
+			}, {
+				"args": {
+					"itemIDs": ["sprite_06"]
+				},
+				"instruct": "closeDrag"
+			}, {
+				"args": {
+					"itemIDs": ["sprite_06"]
+				},
+				"instruct": "moveBack"
+			}, {
+				"args": {
+					"delay": 0.2,
+					"itemIDs": ["sprite_06"]
+				},
+				"instruct": "openDrag"
+			}],
+			"type": "wrong"
+		}, {
+			"id": "handleWrong2",
+			"results": [{
+				"args": {
+					"itemIDs": ["wrong_wobble"]
+				},
+				"instruct": "playAudio"
+			}, {
+				"args": {
+					"itemIDs": ["sprite_07"]
+				},
+				"instruct": "closeDrag"
+			}, {
+				"args": {
+					"itemIDs": ["sprite_07"]
+				},
+				"instruct": "moveBack"
+			}, {
+				"args": {
+					"delay": 0.2,
+					"itemIDs": ["sprite_07"]
+				},
+				"instruct": "openDrag"
+			}],
+			"type": "wrong"
+		}, {
+			"id": "handleWrong3",
+			"results": [{
+				"args": {
+					"itemIDs": ["wrong_wobble"]
+				},
+				"instruct": "playAudio"
+			}, {
+				"args": {
+					"itemIDs": ["sprite_08"]
+				},
+				"instruct": "closeDrag"
+			}, {
+				"args": {
+					"itemIDs": ["sprite_08"]
+				},
+				"instruct": "moveBack"
+			}, {
+				"args": {
+					"delay": 0.2,
+					"itemIDs": ["sprite_08"]
+				},
+				"instruct": "openDrag"
+			}],
+			"type": "wrong"
+		}, {
+			"id": "handleWrong4",
+			"results": [{
+				"args": {
+					"itemIDs": ["wrong_wobble"]
+				},
+				"instruct": "playAudio"
+			}, {
+				"args": {
+					"itemIDs": ["sprite_09"]
+				},
+				"instruct": "closeDrag"
+			}, {
+				"args": {
+					"itemIDs": ["sprite_09"]
+				},
+				"instruct": "moveBack"
+			}, {
+				"args": {
+					"delay": 0.2,
+					"itemIDs": ["sprite_09"]
+				},
+				"instruct": "openDrag"
+			}],
+			"type": "wrong"
+		}],
+		"id": "a1",
+		"rightCount": 4,
+		"type": "singleDrag_multipleSelect_notSort",
+		"ui": {
+			"audios": [{
+				"id": "bgm",
+				"loop": "true",
+				"path": "bgm",
+				"type": "common",
+				"volume": 1
+			}, {
+				"id": "right",
+				"loop": "false",
+				"path": "right",
+				"type": "common",
+				"volume": 1
+			}, {
+				"id": "wrong_wobble",
+				"loop": "false",
+				"path": "wrong_wobble",
+				"type": "common",
+				"volume": 1
+			}, {
+				"id": "13_ap2p_tap_2_quest",
+				"loop": "false",
+				"path": "activity1/13_ap2p_tap_2_quest",
+				"volume": 1
+			}, {
+				"id": "13_success",
+				"loop": "false",
+				"path": "activity1/13_success",
+				"volume": 1
+			}],
+			"labels": [],
+			"spines": [],
+			"sprites": [{
+				"active": "true",
+				"height": 1125,
+				"id": "sprite_01",
+				"opacity": 255,
+				"path": "activity1/13_ap2p_tap_2_bgp",
+				"position": {
+					"x": 0,
+					"y": 0
+				},
+				"rotation": 0,
+				"scale": 1,
+				"width": 2436,
+				"zIndex": 0
+			}, {
+				"active": "true",
+				"components": ["boxColliderComponent"],
+				"height": 420,
+				"id": "sprite_02",
+				"opacity": 255,
+				"path": "activity1/container_elephantenvelope",
+				"position": {
+					"x": -420.454,
+					"y": 28.338
+				},
+				"rotation": 0,
+				"scale": 1,
+				"width": 366,
+				"zIndex": 1
+			}, {
+				"active": "true",
+				"components": ["boxColliderComponent"],
+				"height": 365,
+				"id": "sprite_03",
+				"opacity": 255,
+				"path": "activity1/container_unicornenvelope",
+				"position": {
+					"x": 277.648,
+					"y": 83.795
+				},
+				"rotation": 0,
+				"scale": 1,
+				"width": 434,
+				"zIndex": 1
+			}, {
+				"active": "true",
+				"components": ["boxColliderComponent"],
+				"height": 374,
+				"id": "sprite_04",
+				"opacity": 255,
+				"path": "activity1/container_hedgehogenvelope",
+				"position": {
+					"x": -100.327,
+					"y": 331.912
+				},
+				"rotation": 0,
+				"scale": 1,
+				"width": 420,
+				"zIndex": 1
+			}, {
+				"active": "true",
+				"components": ["boxColliderComponent"],
+				"height": 374,
+				"id": "sprite_05",
+				"opacity": 255,
+				"path": "activity1/container_bearenvelope",
+				"position": {
+					"x": -29.265,
+					"y": -60.528
+				},
+				"rotation": 0,
+				"scale": 1,
+				"width": 420,
+				"zIndex": 1
+			}, {
+				"active": "true",
+				"components": ["dragComponent", "boxColliderComponent"],
+				"height": 250,
+				"id": "sprite_06",
+				"opacity": 255,
+				"path": "activity1/choice_elephantinvitation_start",
+				"position": {
+					"x": -226.394,
+					"y": -437.179
+				},
+				"rotation": 0,
+				"scale": 1,
+				"width": 317,
+				"zIndex": 2
+			}, {
+				"active": "true",
+				"components": ["dragComponent", "boxColliderComponent"],
+				"height": 266,
+				"id": "sprite_07",
+				"opacity": 255,
+				"path": "activity1/choice_unicorninvitation_start",
+				"position": {
+					"x": 158.448,
+					"y": -429.27
+				},
+				"rotation": 0,
+				"scale": 1,
+				"width": 317,
+				"zIndex": 2
+			}, {
+				"active": "true",
+				"components": ["dragComponent", "boxColliderComponent"],
+				"height": 250,
+				"id": "sprite_08",
+				"opacity": 255,
+				"path": "activity1/choice_hedgehoginvitation_start",
+				"position": {
+					"x": -611.369,
+					"y": -436.945
+				},
+				"rotation": 0,
+				"scale": 1,
+				"width": 317,
+				"zIndex": 2
+			}, {
+				"active": "true",
+				"components": ["dragComponent", "boxColliderComponent"],
+				"height": 251,
+				"id": "sprite_09",
+				"opacity": 255,
+				"path": "activity1/choice_bearinvitation_start",
+				"position": {
+					"x": 543.428,
+					"y": -436.37
+				},
+				"rotation": 0,
+				"scale": 1,
+				"width": 317,
+				"zIndex": 2
+			}]
+		}
+	}, {
+		"id": "1",
+		"pageData": {
+			"id": "1",
+			"mode": "auto",
+			"cover": {
+				"img": "",
+				"audio": "",
+				"txt": ""
+			},
+			"pages": [{
+				"id": "6",
+				"img": "p13p14-5",
+				"width": 2436,
+				"height": 1125,
+				"type": "storybook",
+				"txts": [{
+					"txt": "米莉急急忙忙地冲出城堡时，撞倒了一只老刺猬，老刺猬的手里捧着一束鲜花。哎呀！请帖飞得到处都是，鲜花也撒了一地。米莉认出了这只刺猬，是她的老朋友斯派克。斯派克非常不高兴！“走路要看路啊！”他生气地喊道。“对不起！”小公主一边道歉，一边把斯派克扶了起来。“给，这是我生日派对的请帖。”但是斯派克抱怨说：“我不喜欢生日派对。”",
+					"start": 0,
+					"end": 0,
+					"audio": "voice5"
+				}]
+			}, {
+				"id": "7",
+				"img": "p15p16-6",
+				"width": 2436,
+				"height": 1125,
+				"type": "storybook",
+				"txts": [{
+					"txt": "米莉很惊讶：“你不喜欢生日派对吗？每过一个生日就意味着我们又长大了一岁呀。”斯派克嘟哝着：“那又怎么样？每个人都会长大的。人生就是这样！所以为什么要专门开生日派对呢？”他接着说：“你看看我的花！它们都摔坏了。看来我只能把花扔掉了。”“哎呀！别扔。”米莉拦下了斯派克，“它们看起来还是那么漂亮，闻起来还是那么香。我想到了一个好办法。不如我每送一张请帖，就送上一朵你的花吧。你觉得怎么样？”斯派克含糊地说：“我不知道……或许可以吧……”",
+					"start": 0,
+					"end": 0,
+					"audio": "voice6"
+				}]
+			}, {
+				"id": "8",
+				"img": "p17p18-7",
+				"width": 2436,
+				"height": 1125,
+				"type": "storybook",
+				"txts": [{
+					"txt": "于是，两个好朋友就一起出发了。在果园里，他们遇见了大象汉尼拔。米莉说：“汉尼拔，我想邀请你参加我今天的生日派对。”她给了汉尼拔一张请帖和一朵鲜花：“送给你，汉尼拔，这是从田野里摘来的花。你将是我生日派对上的美食家！”“有什么意义呢……有什么意义呢？”斯派克嘟囔道。随后他们遇到了独角兽爱琳。米莉给了她一张请帖和一朵鲜花，邀请她说：“给你，爱琳，这是从山坡上摘来的花。你将是我生日派对上的开心果！”“有什么意义呢……有什么意义呢？”斯派克依然嘀咕个不停。",
+					"start": 0,
+					"end": 0,
+					"audio": "voice7"
+				}]
+			}, {
+				"id": "9",
+				"img": "p19p20-8",
+				"width": 2436,
+				"height": 1125,
+				"type": "storybook",
+				"txts": [{
+					"txt": "继续往前走了一小会儿，他们遇到了小熊里昂。里昂正在采集蜂蜜。“今天是我的生日！”米莉说。“我知道呀，”里昂说，“我给你做了一个蜂蜜蛋糕呢！嘘——这可是个秘密。”米莉递给里昂一张请帖和一朵鲜花，对他说：“给你，里昂，这是一朵很香的花。你将是我生日派对上的好拍档！”“有什么意义呢……有什么意义呢？”斯派克还在嘟哝。",
+					"start": 0,
+					"end": 0,
+					"audio": "voice8"
+				}]
+			}, {
+				"id": "10",
+				"img": "p21p22-9",
+				"width": 2436,
+				"height": 1125,
+				"type": "storybook",
+				"txts": [{
+					"txt": "回去的路上，斯派克走累了。“不要走那么快嘛！”他抱怨，“米莉，如果你是一只像我这么老的刺猬，你就会知道，腿又短，走得又累，到底是什么样的感受！”米莉对他说：“好了，斯派克。我希望你来参加生日派对的时候，不要总是这样抱怨！”斯派克听了很不高兴：“生日派对……嗯……我跟你说了，我不喜欢生日派对。所以你也别指望我会去参加了。”说完，斯派克就转身走开了。",
+					"start": 0,
+					"end": 0,
+					"audio": "voice9"
+				}]
+			}, {
+				"id": "11",
+				"img": "p23p24-10",
+				"width": 2436,
+				"height": 1125,
+				"type": "storybook",
+				"txts": [{
+					"txt": "米莉回到巴尔塔扎尔王国的城门前时，心里有些犹豫：“也许斯派克说的是对的呢？ 如果举办派对来庆祝我又长大了一岁，真的是没有意义的事那该怎么办呢？ 不如跟爸爸说取消派对好了，也不用给我准备什么生日礼物了。”",
+					"start": 0,
+					"end": 0,
+					"audio": "voice10"
+				}]
+			}, {
+				"id": "12",
+				"img": "p25-11",
+				"width": 2436,
+				"height": 1125,
+				"type": "storybook",
+				"txts": [{
+					"txt": "但是当米莉回到城堡时，迎接她的是一个巨大的惊喜！",
+					"start": 0,
+					"end": 0,
+					"audio": "voice11"
+				}]
+			}, {
+				"id": "13",
+				"img": "p26-12",
+				"width": 2436,
+				"height": 1125,
+				"type": "storybook",
+				"txts": [{
+					"txt": "她的爸爸和朋友们已经在等着她了。巴尔塔扎尔国王拿出了给米莉准备的礼物。他说：“这是一本关于鲜花的书。你能从里面找到各种花的名字，还有一些神奇的配方。”“哦，爸爸！”米莉喊道，“这本书真的好棒！”",
+					"start": 0,
+					"end": 0,
+					"audio": "voice12"
+				}]
+			}, {
+				"id": "14",
+				"img": "p27p28-13",
+				"width": 2436,
+				"height": 1125,
+				"type": "storybook",
+				"txts": [{
+					"txt": "随后，小熊里昂点亮了生日蜡烛，所有人都唱起了《生日快乐歌》。每个朋友都给米莉送上了一份礼物。突然，斯派克出现了。“等等我啊。”他一边嘟囔着，一边慢吞吞地朝米莉走来。 “我也带了一份礼物……”他小声对米莉说，“亲爱的小公主，你长大了，我真为你感到骄傲！给你，这是从草地上摘来的花。我这个老朋友很想给你庆祝生日。”米莉轻轻地接过了鲜花，说道： “谢谢你，斯派克。我们一起在爸爸送我的新书里找一找这朵花的名字吧……然后再看看，有没有什么神奇的配方，可以让我们可爱的斯派克，不再没完没了地抱怨！”",
+					"start": 0,
+					"end": 0,
+					"audio": "voice13"
+				}]
+			}, {
+				"id": "15",
+				"img": "p0-14",
+				"width": 2436,
+				"height": 1125,
+				"type": "storybook",
+				"txts": [{
+					"txt": "Les Belles Histoires, Joyeux anniversaire, Princesse Mélie \nAntoine Lanciaux (text), Samuel Ribeyron (illustrations) © Bayard Éditions\n© 2021 Bayard Bridge Digital (HK) Co. Limited, All rights reserved.",
+					"start": 0,
+					"end": 0,
+					"audio": ""
+				}]
+			}]
+		},
+		"type": "storybook"
+	}, {
+		"autoAsyncs": [
+			[{
+				"async": "false",
+				"commands": [{
+					"args": {},
+					"instruct": "playAudio"
+				}],
+				"id": "bgm",
+				"type": "audio"
+			}],
+			[{
+				"commands": [{
+					"args": {
+						"itemIDs": ["sprite_03_01", "sprite_03_02", "sprite_03_03", "sprite_03_04", "sprite_03_05", "sprite_03_06", "sprite_03_07", "sprite_03_08"],
+						"parentIDs": ["sprite_04_01", "sprite_04_02", "sprite_04_03", "sprite_04_04", "sprite_04_05", "sprite_04_06", "sprite_04_07", "sprite_04_08"]
+					},
+					"instruct": "changeParent"
+				}],
+				"id": "sprite_02_01",
+				"type": "sprite"
+			}],
+			[{
+				"commands": [{
+					"args": {},
+					"instruct": "show"
+				}],
+				"id": "sprite_03_01",
+				"type": "sprite"
+			}],
+			[{
+				"commands": [{
+					"args": {},
+					"instruct": "show"
+				}],
+				"id": "sprite_03_02",
+				"type": "sprite"
+			}],
+			[{
+				"commands": [{
+					"args": {},
+					"instruct": "show"
+				}],
+				"id": "sprite_03_03",
+				"type": "sprite"
+			}],
+			[{
+				"commands": [{
+					"args": {},
+					"instruct": "show"
+				}],
+				"id": "sprite_03_04",
+				"type": "sprite"
+			}],
+			[{
+				"commands": [{
+					"args": {},
+					"instruct": "show"
+				}],
+				"id": "sprite_03_05",
+				"type": "sprite"
+			}],
+			[{
+				"commands": [{
+					"args": {},
+					"instruct": "show"
+				}],
+				"id": "sprite_03_06",
+				"type": "sprite"
+			}],
+			[{
+				"commands": [{
+					"args": {},
+					"instruct": "show"
+				}],
+				"id": "sprite_03_07",
+				"type": "sprite"
+			}],
+			[{
+				"commands": [{
+					"args": {},
+					"instruct": "show"
+				}],
+				"id": "sprite_03_08",
+				"type": "sprite"
+			}],
+			[{
+				"commands": [{
+					"args": {
+						"groups": ["mask", "mask"],
+						"itemIDs": ["sprite_01", "sprite_01_01"]
+					},
+					"instruct": "changeGroup"
+				}],
+				"id": "sprite_01",
+				"type": "sprite"
+			}, {
+				"commands": [{
+					"args": {
+						"itemIDs": ["sprite_04_01", "sprite_04_02", "sprite_04_03", "sprite_04_04", "sprite_04_05", "sprite_04_06", "sprite_04_07", "sprite_04_08"],
+						"spPaths": ["activity2/pencil", "activity2/pencil", "activity2/pencil", "activity2/pencil", "activity2/pencil", "activity2/pencil", "activity2/pencil", "activity2/pencil"]
+					},
+					"instruct": "addMaskSpriteFrame"
+				}],
+				"id": "sprite_01",
+				"type": "sprite"
+			}, {
+				"commands": [{
+					"args": {
+						"itemIDs": ["sprite_02_01", "sprite_02_02", "sprite_02_03", "sprite_02_04", "sprite_02_05", "sprite_02_06", "sprite_02_07", "sprite_02_08"],
+						"parentIDs": ["sprite_04_01", "sprite_04_02", "sprite_04_03", "sprite_04_04", "sprite_04_05", "sprite_04_06", "sprite_04_07", "sprite_04_08"]
+					},
+					"instruct": "changeParent"
+				}],
+				"id": "sprite_02_01",
+				"type": "sprite"
+			}, {
+				"commands": [{
+					"args": {
+						"colors": ["#F54D4D", "#FEA037", "#FFF401", "#80DC73", "#66D4CF", "#426DEC", "#A048D5", "#FF95D0"],
+						"itemIDs": ["sprite_02_01", "sprite_02_02", "sprite_02_03", "sprite_02_04", "sprite_02_05", "sprite_02_06", "sprite_02_07", "sprite_02_08"]
+					},
+					"instruct": "fillColor"
+				}],
+				"id": "sprite_02_01",
+				"type": "sprite"
+			}],
+			[{
+				"commands": [{
+					"args": {
+						"questionTxt": "哇~国王送的书里果然有小刺猬送的花朵！你觉得这本书中还会有什么花朵呢？把你知道的花朵画下来吧！",
+						"showIP": "true"
+					},
+					"instruct": "playAudio"
+				}],
+				"id": "14_ap2p_draw_3_quest",
+				"type": "audio"
+			}],
+			[{
+				"commands": [{
+					"args": {},
+					"instruct": "openDraw"
+				}],
+				"id": "sprite_01_01",
+				"type": "sprite"
+			}, {
+				"commands": [{
+					"args": {
+						"colors": ["#F54D4D"],
+						"itemIDs": ["sprite_01_01"]
+					},
+					"instruct": "changeDrawColor"
+				}],
+				"id": "sprite_01",
+				"type": "sprite"
+			}, {
+				"commands": [{
+					"args": {
+						"handle": "clear"
+					},
+					"instruct": "openClick"
+				}],
+				"id": "sprite_001",
+				"type": "sprite"
+			}, {
+				"commands": [{
+					"args": {
+						"handle": "handleRight"
+					},
+					"instruct": "openClick"
+				}],
+				"id": "sprite_002",
+				"type": "sprite"
+			}, {
+				"commands": [{
+					"args": {
+						"handle": "drawColor1"
+					},
+					"instruct": "openClick"
+				}],
+				"id": "sprite_04_01",
+				"type": "noResNodes"
+			}, {
+				"commands": [{
+					"args": {
+						"handle": "drawColor2"
+					},
+					"instruct": "openClick"
+				}],
+				"id": "sprite_04_02",
+				"type": "noResNodes"
+			}, {
+				"commands": [{
+					"args": {
+						"handle": "drawColor3"
+					},
+					"instruct": "openClick"
+				}],
+				"id": "sprite_04_03",
+				"type": "noResNodes"
+			}, {
+				"commands": [{
+					"args": {
+						"handle": "drawColor4"
+					},
+					"instruct": "openClick"
+				}],
+				"id": "sprite_04_04",
+				"type": "noResNodes"
+			}, {
+				"commands": [{
+					"args": {
+						"handle": "drawColor5"
+					},
+					"instruct": "openClick"
+				}],
+				"id": "sprite_04_05",
+				"type": "noResNodes"
+			}, {
+				"commands": [{
+					"args": {
+						"handle": "drawColor6"
+					},
+					"instruct": "openClick"
+				}],
+				"id": "sprite_04_06",
+				"type": "noResNodes"
+			}, {
+				"commands": [{
+					"args": {
+						"handle": "drawColor7"
+					},
+					"instruct": "openClick"
+				}],
+				"id": "sprite_04_07",
+				"type": "noResNodes"
+			}, {
+				"commands": [{
+					"args": {
+						"handle": "drawColor8"
+					},
+					"instruct": "openClick"
+				}],
+				"id": "sprite_04_08",
+				"type": "noResNodes"
+			}]
+		],
+		"feedBack": [{
+			"id": "handleRight",
+			"results": [{
+				"args": {
+					"itemIDs": ["sprite_01_01"]
+				},
+				"instruct": "closeDraw"
+			}, {
+				"args": {
+					"itemIDs": ["right"]
+				},
+				"instruct": "playAudio"
+			}, {
+				"args": {
+					"itemIDs": ["sprite_001", "sprite_002"]
+				},
+				"instruct": "closeClick"
+			}, {
+				"args": {
+					"itemIDs": ["14_success"]
+				},
+				"instruct": "playAudio"
+			}, {
+				"args": {
+					"itemIDs": ["sprite_01"]
+				},
+				"instruct": "capture"
+			}],
+			"type": "right"
+		}, {
+			"id": "clear",
+			"results": [{
+				"args": {
+					"itemIDs": ["sprite_01_01"]
+				},
+				"instruct": "clearAllDraw"
+			}],
+			"type": "wrong"
+		}, {
+			"id": "drawColor1",
+			"results": [{
+				"args": {
+					"colors": ["#F54D4D"],
+					"itemIDs": ["sprite_01_01"]
+				},
+				"instruct": "changeDrawColor"
+			}, {
+				"args": {
+					"itemIDs": ["sprite_04_01", "sprite_04_02", "sprite_04_03", "sprite_04_04", "sprite_04_05", "sprite_04_06", "sprite_04_07", "sprite_04_08"],
+					"positions": [{
+						"x": -682.276,
+						"y": -543
+					}, {
+						"x": -511.707,
+						"y": -623
+					}, {
+						"x": -341.138,
+						"y": -623
+					}, {
+						"x": -170.569,
+						"y": -623
+					}, {
+						"x": 0,
+						"y": -623
+					}, {
+						"x": 170.569,
+						"y": -623
+					}, {
+						"x": 341.138,
+						"y": -623
+					}, {
+						"x": 511.707,
+						"y": -623
+					}]
+				},
+				"instruct": "move"
+			}],
+			"type": "wrong"
+		}, {
+			"id": "drawColor2",
+			"results": [{
+				"args": {
+					"colors": ["#FEA037"],
+					"itemIDs": ["sprite_01_01"]
+				},
+				"instruct": "changeDrawColor"
+			}, {
+				"args": {
+					"itemIDs": ["sprite_04_01", "sprite_04_02", "sprite_04_03", "sprite_04_04", "sprite_04_05", "sprite_04_06", "sprite_04_07", "sprite_04_08"],
+					"positions": [{
+						"x": -682.276,
+						"y": -623
+					}, {
+						"x": -511.707,
+						"y": -543
+					}, {
+						"x": -341.138,
+						"y": -623
+					}, {
+						"x": -170.569,
+						"y": -623
+					}, {
+						"x": 0,
+						"y": -623
+					}, {
+						"x": 170.569,
+						"y": -623
+					}, {
+						"x": 341.138,
+						"y": -623
+					}, {
+						"x": 511.707,
+						"y": -623
+					}]
+				},
+				"instruct": "move"
+			}],
+			"type": "wrong"
+		}, {
+			"id": "drawColor3",
+			"results": [{
+				"args": {
+					"colors": ["#FFF401"],
+					"itemIDs": ["sprite_01_01"]
+				},
+				"instruct": "changeDrawColor"
+			}, {
+				"args": {
+					"itemIDs": ["sprite_04_01", "sprite_04_02", "sprite_04_03", "sprite_04_04", "sprite_04_05", "sprite_04_06", "sprite_04_07", "sprite_04_08"],
+					"positions": [{
+						"x": -682.276,
+						"y": -623
+					}, {
+						"x": -511.707,
+						"y": -623
+					}, {
+						"x": -341.138,
+						"y": -543
+					}, {
+						"x": -170.569,
+						"y": -623
+					}, {
+						"x": 0,
+						"y": -623
+					}, {
+						"x": 170.569,
+						"y": -623
+					}, {
+						"x": 341.138,
+						"y": -623
+					}, {
+						"x": 511.707,
+						"y": -623
+					}]
+				},
+				"instruct": "move"
+			}],
+			"type": "wrong"
+		}, {
+			"id": "drawColor4",
+			"results": [{
+				"args": {
+					"colors": ["#80DC73"],
+					"itemIDs": ["sprite_01_01"]
+				},
+				"instruct": "changeDrawColor"
+			}, {
+				"args": {
+					"itemIDs": ["sprite_04_01", "sprite_04_02", "sprite_04_03", "sprite_04_04", "sprite_04_05", "sprite_04_06", "sprite_04_07", "sprite_04_08"],
+					"positions": [{
+						"x": -682.276,
+						"y": -623
+					}, {
+						"x": -511.707,
+						"y": -623
+					}, {
+						"x": -341.138,
+						"y": -623
+					}, {
+						"x": -170.569,
+						"y": -543
+					}, {
+						"x": 0,
+						"y": -623
+					}, {
+						"x": 170.569,
+						"y": -623
+					}, {
+						"x": 341.138,
+						"y": -623
+					}, {
+						"x": 511.707,
+						"y": -623
+					}]
+				},
+				"instruct": "move"
+			}],
+			"type": "wrong"
+		}, {
+			"id": "drawColor5",
+			"results": [{
+				"args": {
+					"colors": ["#66D4CF"],
+					"itemIDs": ["sprite_01_01"]
+				},
+				"instruct": "changeDrawColor"
+			}, {
+				"args": {
+					"itemIDs": ["sprite_04_01", "sprite_04_02", "sprite_04_03", "sprite_04_04", "sprite_04_05", "sprite_04_06", "sprite_04_07", "sprite_04_08"],
+					"positions": [{
+						"x": -682.276,
+						"y": -623
+					}, {
+						"x": -511.707,
+						"y": -623
+					}, {
+						"x": -341.138,
+						"y": -623
+					}, {
+						"x": -170.569,
+						"y": -623
+					}, {
+						"x": 0,
+						"y": -543
+					}, {
+						"x": 170.569,
+						"y": -623
+					}, {
+						"x": 341.138,
+						"y": -623
+					}, {
+						"x": 511.707,
+						"y": -623
+					}]
+				},
+				"instruct": "move"
+			}],
+			"type": "wrong"
+		}, {
+			"id": "drawColor6",
+			"results": [{
+				"args": {
+					"colors": ["#426DEC"],
+					"itemIDs": ["sprite_01_01"]
+				},
+				"instruct": "changeDrawColor"
+			}, {
+				"args": {
+					"itemIDs": ["sprite_04_01", "sprite_04_02", "sprite_04_03", "sprite_04_04", "sprite_04_05", "sprite_04_06", "sprite_04_07", "sprite_04_08"],
+					"positions": [{
+						"x": -682.276,
+						"y": -623
+					}, {
+						"x": -511.707,
+						"y": -623
+					}, {
+						"x": -341.138,
+						"y": -623
+					}, {
+						"x": -170.569,
+						"y": -623
+					}, {
+						"x": 0,
+						"y": -623
+					}, {
+						"x": 170.569,
+						"y": -543
+					}, {
+						"x": 341.138,
+						"y": -623
+					}, {
+						"x": 511.707,
+						"y": -623
+					}]
+				},
+				"instruct": "move"
+			}],
+			"type": "wrong"
+		}, {
+			"id": "drawColor7",
+			"results": [{
+				"args": {
+					"colors": ["#A048D5"],
+					"itemIDs": ["sprite_01_01"]
+				},
+				"instruct": "changeDrawColor"
+			}, {
+				"args": {
+					"itemIDs": ["sprite_04_01", "sprite_04_02", "sprite_04_03", "sprite_04_04", "sprite_04_05", "sprite_04_06", "sprite_04_07", "sprite_04_08"],
+					"positions": [{
+						"x": -682.276,
+						"y": -623
+					}, {
+						"x": -511.707,
+						"y": -623
+					}, {
+						"x": -341.138,
+						"y": -623
+					}, {
+						"x": -170.569,
+						"y": -623
+					}, {
+						"x": 0,
+						"y": -623
+					}, {
+						"x": 170.569,
+						"y": -623
+					}, {
+						"x": 341.138,
+						"y": -543
+					}, {
+						"x": 511.707,
+						"y": -623
+					}]
+				},
+				"instruct": "move"
+			}],
+			"type": "wrong"
+		}, {
+			"id": "drawColor8",
+			"results": [{
+				"args": {
+					"colors": ["#FF95D0"],
+					"itemIDs": ["sprite_01_01"]
+				},
+				"instruct": "changeDrawColor"
+			}, {
+				"args": {
+					"itemIDs": ["sprite_04_01", "sprite_04_02", "sprite_04_03", "sprite_04_04", "sprite_04_05", "sprite_04_06", "sprite_04_07", "sprite_04_08"],
+					"positions": [{
+						"x": -682.276,
+						"y": -623
+					}, {
+						"x": -511.707,
+						"y": -623
+					}, {
+						"x": -341.138,
+						"y": -623
+					}, {
+						"x": -170.569,
+						"y": -623
+					}, {
+						"x": 0,
+						"y": -623
+					}, {
+						"x": 170.569,
+						"y": -623
+					}, {
+						"x": 341.138,
+						"y": -623
+					}, {
+						"x": 511.707,
+						"y": -543
+					}]
+				},
+				"instruct": "move"
+			}],
+			"type": "wrong"
+		}],
+		"id": "d2",
+		"type": "free_graphics",
+		"ui": {
+			"audios": [{
+				"id": "bgm",
+				"loop": "true",
+				"path": "bgm",
+				"type": "common",
+				"volume": 1
+			}, {
+				"id": "right",
+				"loop": "false",
+				"path": "right",
+				"type": "common",
+				"volume": 1
+			}, {
+				"id": "14_ap2p_draw_3_quest",
+				"loop": "false",
+				"path": "activity2/14_ap2p_draw_3_quest",
+				"volume": 1
+			}, {
+				"id": "14_success",
+				"loop": "false",
+				"path": "activity2/14_success",
+				"volume": 1
+			}],
+			"labels": [],
+			"noResNodes": [{
+				"active": "true",
+				"components": ["maskComponent", "clickComponent"],
+				"height": 421,
+				"id": "sprite_04_01",
+				"opacity": 255,
+				"position": {
+					"x": -682.276,
+					"y": -623
+				},
+				"rotation": 0,
+				"scale": 1,
+				"width": 96,
+				"zIndex": 2
+			}, {
+				"active": "true",
+				"components": ["maskComponent", "clickComponent"],
+				"height": 421,
+				"id": "sprite_04_02",
+				"opacity": 255,
+				"position": {
+					"x": -511.707,
+					"y": -623
+				},
+				"rotation": 0,
+				"scale": 1,
+				"width": 96,
+				"zIndex": 2
+			}, {
+				"active": "true",
+				"components": ["maskComponent", "clickComponent"],
+				"height": 421,
+				"id": "sprite_04_03",
+				"opacity": 255,
+				"position": {
+					"x": -341.138,
+					"y": -623
+				},
+				"rotation": 0,
+				"scale": 1,
+				"width": 96,
+				"zIndex": 2
+			}, {
+				"active": "true",
+				"components": ["maskComponent", "clickComponent"],
+				"height": 421,
+				"id": "sprite_04_04",
+				"opacity": 255,
+				"position": {
+					"x": -170.569,
+					"y": -623
+				},
+				"rotation": 0,
+				"scale": 1,
+				"width": 96,
+				"zIndex": 2
+			}, {
+				"active": "true",
+				"components": ["maskComponent", "clickComponent"],
+				"height": 421,
+				"id": "sprite_04_05",
+				"opacity": 255,
+				"position": {
+					"x": 0,
+					"y": -623
+				},
+				"rotation": 0,
+				"scale": 1,
+				"width": 96,
+				"zIndex": 2
+			}, {
+				"active": "true",
+				"components": ["maskComponent", "clickComponent"],
+				"height": 421,
+				"id": "sprite_04_06",
+				"opacity": 255,
+				"position": {
+					"x": 170.569,
+					"y": -623
+				},
+				"rotation": 0,
+				"scale": 1,
+				"width": 96,
+				"zIndex": 2
+			}, {
+				"active": "true",
+				"components": ["maskComponent", "clickComponent"],
+				"height": 421,
+				"id": "sprite_04_07",
+				"opacity": 255,
+				"position": {
+					"x": 341.138,
+					"y": -623
+				},
+				"rotation": 0,
+				"scale": 1,
+				"width": 96,
+				"zIndex": 2
+			}, {
+				"active": "true",
+				"components": ["maskComponent", "clickComponent"],
+				"height": 421,
+				"id": "sprite_04_08",
+				"opacity": 255,
+				"position": {
+					"x": 511.707,
+					"y": -623
+				},
+				"rotation": 0,
+				"scale": 1,
+				"width": 96,
+				"zIndex": 2
+			}],
+			"spines": [],
+			"sprites": [{
+				"active": "true",
+				"height": 1125,
+				"id": "sprite_01",
+				"opacity": 255,
+				"path": "activity2/14_ap2p_draw_3_bgp",
+				"position": {
+					"x": 0,
+					"y": 0
+				},
+				"rotation": 0,
+				"scale": 1,
+				"width": 2436,
+				"zIndex": 0
+			}, {
+				"active": "true",
+				"components": ["freeDrawComponent"],
+				"height": 1125,
+				"id": "sprite_01_01",
+				"opacity": 255,
+				"path": "activity2/empty",
+				"position": {
+					"x": 0,
+					"y": 0
+				},
+				"rotation": 0,
+				"scale": 1,
+				"width": 2436,
+				"zIndex": 1
+			}, {
+				"active": "true",
+				"components": ["freeDrawComponent"],
+				"height": 64,
+				"id": "sprite_02_01",
+				"opacity": 255,
+				"path": "activity2/transparent",
+				"position": {
+					"x": 0,
+					"y": 177
+				},
+				"rotation": 0,
+				"scale": 1,
+				"width": 96,
+				"zIndex": 1
+			}, {
+				"active": "true",
+				"components": ["freeDrawComponent"],
+				"height": 64,
+				"id": "sprite_02_02",
+				"opacity": 255,
+				"path": "activity2/transparent",
+				"position": {
+					"x": 0,
+					"y": 177
+				},
+				"rotation": 0,
+				"scale": 1,
+				"width": 96,
+				"zIndex": 1
+			}, {
+				"active": "true",
+				"components": ["freeDrawComponent"],
+				"height": 64,
+				"id": "sprite_02_03",
+				"opacity": 255,
+				"path": "activity2/transparent",
+				"position": {
+					"x": 0,
+					"y": 177
+				},
+				"rotation": 0,
+				"scale": 1,
+				"width": 96,
+				"zIndex": 1
+			}, {
+				"active": "true",
+				"components": ["freeDrawComponent"],
+				"height": 64,
+				"id": "sprite_02_04",
+				"opacity": 255,
+				"path": "activity2/transparent",
+				"position": {
+					"x": 0,
+					"y": 177
+				},
+				"rotation": 0,
+				"scale": 1,
+				"width": 96,
+				"zIndex": 1
+			}, {
+				"active": "true",
+				"components": ["freeDrawComponent"],
+				"height": 64,
+				"id": "sprite_02_05",
+				"opacity": 255,
+				"path": "activity2/transparent",
+				"position": {
+					"x": 0,
+					"y": 177
+				},
+				"rotation": 0,
+				"scale": 1,
+				"width": 96,
+				"zIndex": 1
+			}, {
+				"active": "true",
+				"components": ["freeDrawComponent"],
+				"height": 64,
+				"id": "sprite_02_06",
+				"opacity": 255,
+				"path": "activity2/transparent",
+				"position": {
+					"x": 0,
+					"y": 177
+				},
+				"rotation": 0,
+				"scale": 1,
+				"width": 96,
+				"zIndex": 1
+			}, {
+				"active": "true",
+				"components": ["freeDrawComponent"],
+				"height": 64,
+				"id": "sprite_02_07",
+				"opacity": 255,
+				"path": "activity2/transparent",
+				"position": {
+					"x": 0,
+					"y": 177
+				},
+				"rotation": 0,
+				"scale": 1,
+				"width": 96,
+				"zIndex": 1
+			}, {
+				"active": "true",
+				"components": ["freeDrawComponent"],
+				"height": 64,
+				"id": "sprite_02_08",
+				"opacity": 255,
+				"path": "activity2/transparent",
+				"position": {
+					"x": 0,
+					"y": 177
+				},
+				"rotation": 0,
+				"scale": 1,
+				"width": 96,
+				"zIndex": 1
+			}, {
+				"active": "true",
+				"components": ["clickComponent"],
+				"height": 132,
+				"id": "sprite_001",
+				"opacity": 255,
+				"path": "activity2/back",
+				"position": {
+					"x": 705.921,
+					"y": -444.617
+				},
+				"rotation": 0,
+				"scale": 1,
+				"width": 132,
+				"zIndex": 2
+			}, {
+				"active": "true",
+				"components": ["clickComponent"],
+				"height": 132,
+				"id": "sprite_002",
+				"opacity": 255,
+				"path": "activity2/btn_download",
+				"position": {
+					"x": 904.018,
+					"y": -444.617
+				},
+				"rotation": 0,
+				"scale": 1,
+				"width": 132,
+				"zIndex": 2
+			}, {
+				"active": "false",
+				"height": 421,
+				"id": "sprite_03_01",
+				"opacity": 255,
+				"path": "activity2/pencil",
+				"position": {
+					"x": 0,
+					"y": 0
+				},
+				"rotation": 0,
+				"scale": 1,
+				"width": 96,
+				"zIndex": 1
+			}, {
+				"active": "false",
+				"height": 421,
+				"id": "sprite_03_02",
+				"opacity": 255,
+				"path": "activity2/pencil",
+				"position": {
+					"x": 0,
+					"y": 0
+				},
+				"rotation": 0,
+				"scale": 1,
+				"width": 96,
+				"zIndex": 1
+			}, {
+				"active": "false",
+				"height": 421,
+				"id": "sprite_03_03",
+				"opacity": 255,
+				"path": "activity2/pencil",
+				"position": {
+					"x": 0,
+					"y": 0
+				},
+				"rotation": 0,
+				"scale": 1,
+				"width": 96,
+				"zIndex": 1
+			}, {
+				"active": "false",
+				"height": 421,
+				"id": "sprite_03_04",
+				"opacity": 255,
+				"path": "activity2/pencil",
+				"position": {
+					"x": 0,
+					"y": 0
+				},
+				"rotation": 0,
+				"scale": 1,
+				"width": 96,
+				"zIndex": 1
+			}, {
+				"active": "false",
+				"height": 421,
+				"id": "sprite_03_05",
+				"opacity": 255,
+				"path": "activity2/pencil",
+				"position": {
+					"x": 0,
+					"y": 0
+				},
+				"rotation": 0,
+				"scale": 1,
+				"width": 96,
+				"zIndex": 1
+			}, {
+				"active": "false",
+				"height": 421,
+				"id": "sprite_03_06",
+				"opacity": 255,
+				"path": "activity2/pencil",
+				"position": {
+					"x": 0,
+					"y": 0
+				},
+				"rotation": 0,
+				"scale": 1,
+				"width": 96,
+				"zIndex": 1
+			}, {
+				"active": "false",
+				"height": 421,
+				"id": "sprite_03_07",
+				"opacity": 255,
+				"path": "activity2/pencil",
+				"position": {
+					"x": 0,
+					"y": 0
+				},
+				"rotation": 0,
+				"scale": 1,
+				"width": 96,
+				"zIndex": 1
+			}, {
+				"active": "false",
+				"height": 421,
+				"id": "sprite_03_08",
+				"opacity": 255,
+				"path": "activity2/pencil",
+				"position": {
+					"x": 0,
+					"y": 0
+				},
+				"rotation": 0,
+				"scale": 1,
+				"width": 96,
+				"zIndex": 1
+			}]
+		}
+	}]
+}

@@ -2,6 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
 import 'dart:developer' as developer;
 import 'package:flutter/rendering.dart';
+import 'package:flutterapp/FirstScreen.dart';
+import 'package:flutterapp/SecondScreen.dart';
 
 void main() {
   // debugPaintSizeEnabled = false;
@@ -11,26 +13,15 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return new MaterialApp(
-        // showPerformanceOverlay: false,
-        title: 'Welcome t o Flutter',
-        home: new Scaffold(
-          appBar: new AppBar(
-            title: new Text('Welcome to Flutter'),
-          ),
-          body: Center(
-            //child: new Text(wordPair.asPascalCase),
-            // child: new Opacity(
-            //   opacity: 0.8,
-            //   child: new Container(
-            //     height: 150,
-            //     width: 200,
-            //     color: Colors.red,
-            //   ),
-            // ),
-            child: new MyListView(),
-          ),
-        ));
+    // TODO: implement build
+
+    return MaterialApp(
+      initialRoute: '/',
+      routes: {
+        '/': (context) => FirstScreen(),
+        '/second': (context) => SecondScreen()
+      },
+    );
   }
 }
 
@@ -89,7 +80,7 @@ Widget build(BuildContext context) {
   );
 }
 
-TextStyle style = new TextStyle(color: Colors.red,fontSize: 30);
+TextStyle style = new TextStyle(color: Colors.red, fontSize: 30);
 
 //1、 定义一个数据源
 final items = new List<String>.generate(1000, (index) => "Item $index");
@@ -105,6 +96,34 @@ class MyListView extends StatelessWidget {
           title: new Text('${items[index]}'),
         );
       },
+    );
+  }
+}
+
+class ContainerWidget extends StatefulWidget {
+  @override
+  State<StatefulWidget> createState() {
+    //这里记住需要使用return语句，不然会报错
+    return new ContainerWrapper();
+  }
+}
+
+class ContainerWrapper extends State<ContainerWidget> {
+  Color color = Colors.red;
+
+  @override
+  Widget build(BuildContext context) {
+    return new Container(
+      color: color,
+      height: 200,
+      width: 300,
+      child: GestureDetector(
+        onTap: () {
+          setState(() {
+            color = Colors.yellow;
+          });
+        },
+      ),
     );
   }
 }
