@@ -18,27 +18,50 @@ class MyApp extends StatelessWidget {
         appBar: new AppBar(
           title: new Text('Welcome to Flutter'),
         ),
-        body: new Center(
+        body: Center(
           //child: new Text(wordPair.asPascalCase),
-          child: new RandomWords(),
+          child:  _MyCanvas(),
         ),
       ),
     );
   }
 }
 
-class RandomWords extends StatefulWidget {
+
+class MyCavansPainter extends CustomPainter {
   @override
-  State<StatefulWidget> createState() {
-    return new RandomWordsState();
+  void paint(Canvas canvas, Size size) {
+    // TODO: implement paint
+    Paint paint = new Paint();
+    paint.color = Colors.amber;
+    canvas.drawCircle(Offset(100.0,200.0), 40, paint);
+    Paint paintRect = Paint();
+    paintRect.color = Colors.lightBlue;
+    Rect react = Rect.fromPoints(Offset(100,100), Offset(200,200));
+    canvas.drawRect(react, paintRect);
+
   }
+
+  @override
+  bool shouldRepaint(covariant CustomPainter oldDelegate) => false;
+
+  @override
+  bool shouldRebuildSemantics(covariant CustomPainter oldDelegate) => false;
+
 }
 
-class RandomWordsState extends State<RandomWords> {
+class _MyCanvas extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    var wordPair = new WordPair.random();
-    developer.log('wordPair:${wordPair}', name: "RandomWordsState");
-    return new Text(wordPair.asPascalCase);
+    // TODO: implement build
+    return Scaffold(
+      body: CustomPaint(
+        painter: MyCavansPainter(),
+      ),
+    );
   }
+
+
+
+
 }
