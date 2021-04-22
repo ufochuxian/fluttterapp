@@ -20,14 +20,15 @@ class MyApp extends StatelessWidget {
           ),
           body: Center(
             //child: new Text(wordPair.asPascalCase),
-            child: new Opacity(
-              opacity: 0.8,
-              child: new Container(
-                height: 150,
-                width: 200,
-                color: Colors.red,
-              ),
-            ),
+            // child: new Opacity(
+            //   opacity: 0.8,
+            //   child: new Container(
+            //     height: 150,
+            //     width: 200,
+            //     color: Colors.red,
+            //   ),
+            // ),
+            child: new MyListView(),
           ),
         ));
   }
@@ -86,4 +87,24 @@ Widget build(BuildContext context) {
   return new Center(
     child: new CustomButton("hello"),
   );
+}
+
+TextStyle style = new TextStyle(color: Colors.red,fontSize: 30);
+
+class MyListView extends StatelessWidget {
+  @override
+  Widget build(BuildContext context) {
+
+    return new ListView(
+      children: <Widget>[
+        Text("aaaaaaaaa",style: style),
+        Text("bbbbbbbbb",style: style),
+        Text("ccccccccc",style: style),
+        Text("ddddddddd"),
+        Text("eeeeeeeeee"),
+        Text("ffffffffff"),
+      ],
+    );
+  }
+
 }
